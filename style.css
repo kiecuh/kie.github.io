@@ -1,0 +1,980 @@
+html{
+    font-size: 10px;
+}
+a {
+    text-decoration: none;
+}
+
+.navbar {
+    background-color: rgb(130, 8, 8) !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 90%;
+    width: 100%;
+    z-index: 9999;
+}
+
+
+.brand {
+    color: #ffffff;
+    letter-spacing: -5px;
+    font-family: 'Audiowide', cursive;  /* Apply Audiowide pixel font */
+}
+
+.navbar .brand {
+    font-size: 40px !important;
+    text-decoration: none;
+}
+
+
+.navbar-nav .home {
+    font-family: 'Audiowide', cursive;  /* Apply Audiowide pixel font */
+    color: #000000;
+    margin-left: 80px;
+    font-size: 20px;
+    margin-top: 3px;
+}
+
+/* Styling for .more class inside <h1> */
+.more {
+    font-family: 'Audiowide', cursive;  /* Apply Audiowide pixel font */
+    color: #000000;
+    margin-left: -350px;
+    font-size: 20px;
+    margin-top: 3px;
+}
+.all {
+    font-family: 'Audiowide', cursive;  /* Apply Audiowide pixel font */
+    color: #000000;
+    margin-left: -470px;
+    font-size: 20px;
+    margin-top: 3px;
+}
+/* Styling the search form container */
+.d-flex {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+  /* Input field styling */
+  .form-control {
+    flex-grow: 1;
+    padding: 2px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  .form-control::placeholder {
+    color: #999; /* Light gray placeholder text */
+  }
+  
+  /* Button styling */
+  .btn {
+    padding: 5px 20px;
+    background-color:#3e3d3d; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .btn:hover {
+    background-color: rgb(0, 0, 0); /* Darker red for hover effect */
+    transform: scale(1.05); /* Slight zoom on hover */
+  }
+  
+  .ms-3 {
+    margin-left: 10px; /* Adjust spacing between input and button */
+  }
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #fff;
+    background-color: #3e3d3d;
+    overflow-x: hidden;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.name-container {
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: nowrap;
+    width: 100%;
+    position: relative;
+}
+
+.name-container {
+    width: 100%;
+    transition: transform 0.6s ease-in-out;
+    margin-top: 10px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0px !important; 
+}
+
+.center-name {
+    font-size: 25px;  
+    transition: font-size 0.3s ease, transform 0.3s ease;
+    transform: scale(1.1) translateY(10px) translateX(-15px);  
+    position: relative;  
+    color: #fff;
+}
+
+.gamename, .gamename2, .gamename3, .gamename4, .gamename5 {
+    font-family: 'Audiowide', cursive; 
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin: 0 10px;
+    position: absolute;
+    margin-top: -10px;
+}
+
+.gamename {
+    left: 60px;
+    z-index: 999;
+}
+
+.gamename2 {
+    left: 390px;
+    z-index: 998;
+}
+
+.gamename3 {
+    left: 740px;
+    z-index: 997;
+}
+
+.gamename4 {
+    left: 1030px;
+    z-index: 996;
+}
+
+.gamename5 {
+    left: 1345px;
+    z-index: 995;
+}
+
+.transparent {
+    opacity: .10000;
+    transition: transform 0.3s ease-in-out;
+}
+
+.slider-container {
+    margin-top: 130px;
+    transition: transform 0.5s ease-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+}
+
+.slider {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    transform-style: preserve-3d;
+    z-index: 2;
+    margin-top: -10px;
+    transition: transform 0.6s ease-in-out;
+    margin-left: 250px;
+}
+
+.slider button.center {
+    transform: scale(1.1);
+}
+
+.game1, .game2, .tetris, .game3, .game4 {
+    margin: 0 10px;
+    color: white;
+    border: none;
+    padding: 200px 150px;
+    font-size: 2rem;
+    position: relative;
+    cursor: pointer;
+    flex-shrink: 0;
+    right: -20px;
+    transition: opacity 0.6s ease-out;
+}
+
+.game1 {
+    background-image: url(games/gameicon/tictactoe.jfif);
+    background-repeat: no-repeat;
+    background-size: 300px 400px;
+}
+
+.game2 {
+    background-image: url(games/gameicon/maze.jfif);
+    background-repeat: no-repeat;
+    background-size: 300px 400px;
+}
+
+.game3 {
+    background-image: url(games/gameicon/slice.png);
+    background-repeat: no-repeat;
+    background-size: 300px 400px;
+}
+
+.game4 {
+    background-image: url(games/gameicon/cross.jfif);
+    background-repeat: no-repeat;
+    background-size: 300px 400px;
+}
+
+.tetris {
+    background-image: url(games/gameicon/tetris.png);
+    background-repeat: no-repeat;
+    background-size: 299px 400px;
+}
+
+.barrier2 {
+    padding: 300px 235px;
+    position: absolute;
+    top: 55%;
+    left: 83%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    opacity: 0;
+}
+
+.barrier1 {
+    padding: 300px 255px;
+    position: absolute;
+    top: 55%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    opacity: 0;
+}
+
+body {
+    overflow: hidden;
+}
+
+@media (max-width: 1440px) {
+    body {
+        touch-action: manipulation;
+    }
+
+.slider-container{
+    margin-left: 60px;
+}
+.barrier2 {
+    padding: 650px 200px;
+    position: absolute;
+    top: 55%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    opacity: 0;
+}
+
+.barrier1 {
+    padding: 650px 200px;
+    position: absolute;
+    top: 55%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    opacity: 0;
+}
+} 
+
+@media (max-width: 1024px) {
+    body {
+        touch-action: manipulation;
+    }
+
+    html, body {
+        font-size: 8px; /* Reasonable base font size for small screens */
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .navbar {
+        position: fixed;
+        bottom: 0;
+        padding: 30px 40px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        background-color: #fff;
+        height: 0vh;
+    }
+
+    .navbar .brand {
+        font-size: 30px !important;
+        letter-spacing: -3px;
+        margin-top: 5px;
+        margin-left: -40px;
+    }
+
+    .navbar-nav .home {
+        font-size: 12px !important;
+        margin-left: 50px !important;
+    }
+    .all {
+        margin-top: 3px;
+        font-size: 12px !important;
+        margin-left: -600px !important;
+    }
+
+    .more {
+        margin-top: 3px;
+        font-size: 12px !important;
+        margin-left: -373px !important;
+    }
+
+
+    .navbar-toggler {
+        padding: 5px 10px;
+        margin-top: -20px;
+    }
+
+    /* Slider container */
+    .slider-container {
+        flex-direction: row;
+        gap: 16px;
+        padding: 10px;
+        margin: 0 auto;
+        margin-top: 100px; /* Adjust margin-top */
+        box-sizing: border-box;
+        width: 100%;
+        overflow: visible;
+        margin-left: -290px;
+    }
+
+    /* Game buttons */
+    .game1, .game2, .tetris, .game3, .game4 {
+        flex: 1 0 100%; /* Full width */
+        padding: 150px 100px;
+        font-size: 1rem; /* Reduce font size */
+        transition: opacity 0.4s ease-out;
+        margin-top: 70px;
+    }
+    
+.game1 {
+background-image: url(games/gameicon/tictactoe.jfif);
+background-repeat: no-repeat;
+background-size: 200px 300px;
+}
+
+.game2 {
+background-image: url(games/gameicon/maze.jfif);
+background-repeat: no-repeat;
+background-size: 200px 300px;
+}
+
+.game3 {
+background-image: url(games/gameicon/slice.png);
+background-repeat: no-repeat;
+background-size: 200px 300px;
+}
+
+.game4 {
+background-image: url(games/gameicon/cross.jfif);
+background-repeat: no-repeat;
+background-size: 200px 350px;
+}
+
+.tetris {
+background-image: url(games/gameicon/tetris.png);
+background-repeat: no-repeat;
+background-size: 200px 300px;
+}
+.gamename, .gamename2, .gamename3, .gamename4, .gamename5 {
+font-family: 'Audiowide', cursive; 
+color: rgb(255, 255, 255);
+text-align: center;
+margin: 0 10px;
+position: absolute;
+margin-top:200px;
+}
+
+.gamename {
+left: -1070px;
+z-index: 999;
+}
+
+.gamename2 {
+left: -840px;
+z-index: 998;
+}
+
+.gamename3 {
+left: -595px;
+z-index: 997;
+}
+
+.gamename4 {
+left: -405px;
+z-index: 996;
+}
+
+.gamename5 {
+left: -185px;
+z-index: 995;
+}
+
+.transparent {
+opacity: .10000;
+transition: transform 0.3s ease-in-out;
+}
+.center-name {
+font-size: 20px;  
+transition: font-size 0.3s ease, transform 0.3s ease;
+transform: scale(1.1) translateY(0px) translateX(0px);  
+position: relative;  
+color: #fff;
+}
+
+
+.barrier2 {
+    padding: 300px 230px;
+    position: absolute;
+    top: 55%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    opacity: 0;
+}
+
+.barrier1 {
+    padding: 300px 230px;
+    position: absolute;
+    top: 55%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    opacity: 0;
+}
+
+}
+@media (max-width: 990px) {
+    body {
+        touch-action: manipulation;
+    }
+
+    html, body {
+        font-size: 12px; /* Increased base font size for readability on medium screens */
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Navbar styles */
+    .navbar {
+        position: fixed; /* Fix navbar to the bottom */
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        padding: 10px 50px; /* Adjust padding for smaller screens */
+        height: auto;
+        display: flex;
+        justify-content: space-between; /* Space out navbar items */
+        align-items: center; /* Center items vertically */
+        height: 50px;
+    
+    }
+
+    .navbar .brand {
+        font-size: 25px !important; /* Slightly smaller font size */
+        letter-spacing: -2px;
+        margin-top: -5px ; /* Reset margin-top to avoid shifting */
+        margin-left: 0; /* Reset margin-left */
+    }
+
+    .navbar-nav .home {
+        font-size: 14px !important;
+        margin-left: 20px !important; /* Adjust margin to align better */
+    }
+
+    .all {
+        margin-top: 0;
+        font-size: 14px !important;
+        margin-left: 0 !important; /* Reset margin */
+    }
+
+    .more {
+        margin-top: 0;
+        font-size: 14px !important;
+        margin-left: 0 !important; /* Reset margin */
+    }
+
+    .navbar-toggler {
+        padding: 5px 10px;
+        margin-top: 40px;
+    }
+    .navbar-toggler {
+        padding: 5px 10px;
+        margin-top: -10px;
+    }
+
+    /* Slider container */
+    .slider-container {
+        flex-direction: row;
+        gap: 16px;
+        padding: 10px;
+        margin: 0 auto;
+        margin-top: 100px; /* Adjust margin-top */
+        box-sizing: border-box;
+        width: 100%;
+        overflow: visible;
+        margin-left: -290px;
+    }
+
+    /* Game buttons */
+    .game1, .game2, .tetris, .game3, .game4 {
+        flex: 1 0 100%; /* Full width */
+        padding: 150px 100px;
+        font-size: 1rem; /* Reduce font size */
+        transition: opacity 0.4s ease-out;
+        margin-top: 70px;
+    }
+    
+.game1 {
+background-image: url(games/gameicon/tictactoe.jfif);
+background-repeat: no-repeat;
+background-size: 200px 300px;
+}
+
+.game2 {
+background-image: url(games/gameicon/maze.jfif);
+background-repeat: no-repeat;
+background-size: 200px 300px;
+}
+
+.game3 {
+background-image: url(games/gameicon/slice.png);
+background-repeat: no-repeat;
+background-size: 200px 300px;
+}
+
+.game4 {
+background-image: url(games/gameicon/cross.jfif);
+background-repeat: no-repeat;
+background-size: 200px 350px;
+}
+
+.tetris {
+background-image: url(games/gameicon/tetris.png);
+background-repeat: no-repeat;
+background-size: 200px 300px;
+}
+.gamename, .gamename2, .gamename3, .gamename4, .gamename5 {
+font-family: 'Audiowide', cursive; 
+color: rgb(255, 255, 255);
+text-align: center;
+margin: 0 10px;
+position: absolute;
+margin-top:200px;
+}
+
+.gamename {
+left: -1070px;
+z-index: 999;
+}
+
+.gamename2 {
+left: -840px;
+z-index: 998;
+}
+
+.gamename3 {
+left: -595px;
+z-index: 997;
+}
+
+.gamename4 {
+left: -405px;
+z-index: 996;
+}
+
+.gamename5 {
+left: -185px;
+z-index: 995;
+}
+
+.transparent {
+opacity: .10000;
+transition: transform 0.3s ease-in-out;
+}
+.center-name {
+font-size: 20px;  
+transition: font-size 0.3s ease, transform 0.3s ease;
+transform: scale(1.1) translateY(0px) translateX(0px);  
+position: relative;  
+color: #fff;
+}
+
+
+.barrier2 {
+    padding: 300px 230px;
+    position: absolute;
+    top: 55%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    opacity: 0;
+}
+
+.barrier1 {
+    padding: 300px 230px;
+    position: absolute;
+    top: 55%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    opacity: 0;
+}
+
+}
+@media (max-width: 768px) {
+    body {
+        touch-action: manipulation;
+    }
+
+    html, body {
+        font-size: 8px; /* Reasonable base font size for small screens */
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .navbar {
+        position: fixed;
+        bottom: 0;
+        padding: 30px 40px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        background-color: #fff;
+        height: 0vh;
+    }
+
+    .navbar .brand {
+        font-size: 30px !important;
+        letter-spacing: -3px;
+        margin-top: -20px;
+        margin-left: -40px;
+    }
+
+    .navbar-nav .home {
+        font-size: 12px !important;
+        margin-left: -350px !important;
+    }
+    .all {
+        margin-top: -5px;
+        font-size: 12px !important;
+        margin-left: -350px !important;
+    }
+
+    .more {
+        font-size: 12px !important;
+        margin-left: -323px !important;
+    }
+
+
+    .navbar-toggler {
+        padding: 5px 10px;
+        margin-top: -20px;
+    }
+
+    /* Slider container */
+    .slider-container {
+        flex-direction: row;
+        gap: 16px;
+        padding: 10px;
+        margin: 0 auto;
+        margin-top: 100px; /* Adjust margin-top */
+        box-sizing: border-box;
+        width: 100%;
+        overflow: visible;
+        margin-left: -290px;
+    }
+
+    /* Game buttons */
+    .game1, .game2, .tetris, .game3, .game4 {
+        flex: 1 0 100%; /* Full width */
+        padding: 150px 100px;
+        font-size: 1rem; /* Reduce font size */
+        transition: opacity 0.4s ease-out;
+        margin-top: 70px;
+    }
+    
+.game1 {
+background-image: url(games/gameicon/tictactoe.jfif);
+background-repeat: no-repeat;
+background-size: 200px 300px;
+}
+
+.game2 {
+background-image: url(games/gameicon/maze.jfif);
+background-repeat: no-repeat;
+background-size: 200px 300px;
+}
+
+.game3 {
+background-image: url(games/gameicon/slice.png);
+background-repeat: no-repeat;
+background-size: 200px 300px;
+}
+
+.game4 {
+background-image: url(games/gameicon/cross.jfif);
+background-repeat: no-repeat;
+background-size: 200px 350px;
+}
+
+.tetris {
+background-image: url(games/gameicon/tetris.png);
+background-repeat: no-repeat;
+background-size: 200px 300px;
+}
+.gamename, .gamename2, .gamename3, .gamename4, .gamename5 {
+font-family: 'Audiowide', cursive; 
+color: rgb(255, 255, 255);
+text-align: center;
+margin: 0 10px;
+position: absolute;
+margin-top:200px;
+}
+
+.gamename {
+left: -1070px;
+z-index: 999;
+}
+
+.gamename2 {
+left: -840px;
+z-index: 998;
+}
+
+.gamename3 {
+left: -595px;
+z-index: 997;
+}
+
+.gamename4 {
+left: -405px;
+z-index: 996;
+}
+
+.gamename5 {
+left: -185px;
+z-index: 995;
+}
+
+.transparent {
+opacity: .10000;
+transition: transform 0.3s ease-in-out;
+}
+.center-name {
+font-size: 20px;  
+transition: font-size 0.3s ease, transform 0.3s ease;
+transform: scale(1.1) translateY(0px) translateX(0px);  
+position: relative;  
+color: #fff;
+}
+
+
+.barrier2 {
+    padding: 300px 130px;
+    position: absolute;
+    top: 55%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    opacity: 0;
+}
+
+.barrier1 {
+    padding: 300px 130px;
+    position: absolute;
+    top: 55%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    opacity: 0;
+}
+
+}
+    @media (max-width: 320px) {
+        body {
+            touch-action: manipulation;
+        }
+    
+        html, body {
+            font-size: 5px; /* Reasonable base font size for small screens */
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+    
+        .navbar {
+            position: fixed;
+            bottom: 0;
+            padding: 20px 20px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            background-color: #fff;
+        }
+    
+        .navbar .brand {
+            font-size: 20px !important;
+            margin-left: -10px;
+            letter-spacing: -2px;
+            margin-top: -10px !important;
+        }
+    
+        .navbar-nav .home, .more, .all {
+            font-size: 12px !important;
+            margin-left: -10px !important;
+            flex-shrink: 0;
+        }
+    
+        .navbar-toggler {
+            padding: 5px 10px;
+            margin-top: -10px;
+        }
+    
+        /* Slider container */
+        .slider-container {
+            flex-direction: row;
+            gap: 16px;
+            padding: 10px;
+            margin: 0 auto;
+            margin-top: 100px; /* Adjust margin-top */
+            box-sizing: border-box;
+            width: 100%;
+            overflow: visible;
+            margin-left: -290px;
+        }
+    
+        /* Game buttons */
+        .game1, .game2, .tetris, .game3, .game4 {
+            flex: 1 0 100%; /* Full width */
+            padding: 50px 40px;
+            font-size: 1rem; /* Reduce font size */
+            transition: opacity 0.4s ease-out;
+        }
+        
+.game1 {
+    background-image: url(games/gameicon/tictactoe.jfif);
+    background-repeat: no-repeat;
+    background-size: 80px 100px;
+}
+
+.game2 {
+    background-image: url(games/gameicon/maze.jfif);
+    background-repeat: no-repeat;
+    background-size: 80px 100px;
+}
+
+.game3 {
+    background-image: url(games/gameicon/slice.png);
+    background-repeat: no-repeat;
+    background-size: 80px 100px;
+}
+
+.game4 {
+    background-image: url(games/gameicon/cross.jfif);
+    background-repeat: no-repeat;
+    background-size: 80px 100px;
+}
+
+.tetris {
+    background-image: url(games/gameicon/tetris.png);
+    background-repeat: no-repeat;
+    background-size: 80px 100px;
+}
+.gamename, .gamename2, .gamename3, .gamename4, .gamename5 {
+    font-family: 'Audiowide', cursive; 
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin: 0 10px;
+    position: absolute;
+    margin-top: 80px;
+}
+
+.gamename {
+    left: -477px;
+    z-index: 999;
+}
+
+.gamename2 {
+    left: -375px;
+    z-index: 998;
+}
+
+.gamename3 {
+    left: -260px;
+    z-index: 997;
+}
+
+.gamename4 {
+    left: -175px;
+    z-index: 996;
+}
+
+.gamename5 {
+    left: -75px;
+    z-index: 995;
+}
+
+.transparent {
+    opacity: -1.10000;
+    transition: transform 0.3s ease-in-out;
+}
+.center-name {
+    font-size: 10px;  
+    transition: font-size 0.3s ease, transform 0.3s ease;
+    transform: scale(1.1) translateY(10px) translateX(-15px);  
+    position: relative;  
+    color: #fff;
+}
+
+  
+    .barrier2 {
+        padding: 300px 50px;
+        position: absolute;
+        top: 55%;
+        left: 85%;
+        transform: translate(-50%, -50%);
+        z-index: 999;
+        opacity: 0;
+    }
+    
+    .barrier1 {
+        padding: 300px 50px;
+        position: absolute;
+        top: 55%;
+        left: 15%;
+        transform: translate(-50%, -50%);
+        z-index: 999;
+        opacity: 0;
+    }
+    
+}
+

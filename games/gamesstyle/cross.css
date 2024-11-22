@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
+body {
+  margin: 0;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 2em;
+  color: white;
+}
+button {
+  outline: none;
+  cursor: pointer;
+  border: none;
+  box-shadow: 3px 5px 0px 0px rgba(0,0,0,0.75);
+}
+#counter {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+#end {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+}
+#end button {
+  background-color: red;
+  padding: 20px 50px 20px 50px;
+  font-family: inherit;
+  font-size: inherit;
+}
+#controlls {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+#controlls div {
+  display: grid;
+  grid-template-columns: 50px 50px 50px;
+  grid-template-rows: auto auto;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  margin-bottom: 20px;
+}
+#controlls button {
+  width: 100%;
+  background-color: white;
+  border: 1px solid lightgray;
+}
+#controlls button:first-of-type {
+  grid-column: 1/-1;
+}
+.back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    color: white;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 2px solid rgba(255, 255, 255, 0.8); /* Optional: subtle white border */
+    cursor: pointer;
+    transition: background-color 0.3s ease, border 0.3s ease; /* Smooth transition on hover */
+}
+
+.back-button:hover {
+    background-color: rgba(155, 21, 21, 0.8); /* Semi-transparent red on hover */
+    border: 2px solid rgba(255, 255, 255, 1); /* Optional: white border on hover */
+}

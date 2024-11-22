@@ -1,0 +1,52 @@
+canvas {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    width: 640px;
+    height: 640px;
+    margin: -320px 0 0 -320px;
+}
+
+body{
+padding: 25px;
+}
+.title {
+color: #5C6AC4;
+}
+canvas {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    width: 640px;
+    height: 640px;
+    margin: -320px 0 0 -320px;
+}
+
+body {
+    padding: 25px;
+}
+
+.title {
+    color: #5C6AC4;
+}
+
+.back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    color: white;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 2px solid rgba(255, 255, 255, 0.8); /* Optional: subtle white border */
+    cursor: pointer;
+    transition: background-color 0.3s ease, border 0.3s ease; /* Smooth transition on hover */
+}
+
+.back-button:hover {
+    background-color: rgba(155, 21, 21, 0.8); /* Semi-transparent red on hover */
+    border: 2px solid rgba(255, 255, 255, 1); /* Optional: white border on hover */
+}
